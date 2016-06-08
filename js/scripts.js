@@ -4,8 +4,10 @@ $(document).ready(function(){
     var yearInput = parseInt($("#yearInput").val());
     console.log(yearInput);
 
-
-    if (yearInput%100===0) {
+    if (yearInput%400===0) {
+      $("#positive").show();
+    }
+    else if (yearInput%100===0) {
       $("#negative").show();
     }
     else if (yearInput % 4 === 0) {
