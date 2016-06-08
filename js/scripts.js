@@ -4,7 +4,10 @@ $(document).ready(function(){
     var yearInput = parseInt($("#yearInput").val());
     console.log(yearInput);
 
-    if (yearInput%400===0) {
+    if (isNaN(yearInput) || yearInput < 0) {
+      $("#notayear").show();
+    }
+    else if (yearInput%400===0) {
       $("#positive").show();
     }
     else if (yearInput%100===0) {
@@ -16,5 +19,6 @@ $(document).ready(function(){
     else if (!(yearInput % 4 === 0)) {
       $("#negative").show();
     }
-  })
-})
+
+  });
+});
