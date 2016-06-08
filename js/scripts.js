@@ -4,6 +4,10 @@ $(document).ready(function(){
     var yearInput = parseInt($("#yearInput").val());
     console.log(yearInput);
 
+    $("#notayear").hide();
+    $("#positive").hide();
+    $("#negative").hide();
+
     if (isNaN(yearInput) || yearInput < 0) {
       $("#notayear").show();
     }
